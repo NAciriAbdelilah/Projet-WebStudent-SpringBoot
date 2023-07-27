@@ -58,6 +58,11 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${project.parent.version}</version>
+                <!-- Configuration pour générer un WAR avec le classifier "exec" -->
+                <configuration>
+                    <classifier>exec</classifier>
+                    <mainClass>com.example.spring.webstudentbookspring.WebStudentBookSpringApplication</mainClass>
+                </configuration>
             </plugin>
         </plugins>
     </build>
