@@ -25,7 +25,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
@@ -73,7 +72,6 @@
                     <mainClass>com.example.spring.webstudentbookspring.WebStudentBookSpringApplication</mainClass>
                 </configuration>
             </plugin>
-
             <!-- Plugin Maven pour générer le fichier WAR avec un nom personnalisé (facultatif) -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
