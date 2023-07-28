@@ -13,6 +13,8 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>WebStudentBookSpring</name>
     <description>WebStudentBookSpring</description>
+    <!-- Ajout de la balise packaging pour générer un fichier WAR -->
+    <packaging>war</packaging>
     <properties>
         <java.version>17</java.version>
     </properties>
@@ -54,22 +56,26 @@
     </dependencies>
     <build>
         <plugins>
+            <!-- Plugin Maven Spring Boot -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${project.parent.version}</version>
-
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>repackage</goal>
-                        </goals>
-                        <configuration>
-                            <mainClass>com.example.spring.webstudentbookspring.WebStudentBookSpringApplication</mainClass>
-                        </configuration>
-                    </execution>
-                </executions>
+                <configuration>
+                    <mainClass>com.example.spring.webstudentbookspring.WebStudentBookSpringApplication</mainClass>
+                </configuration>
             </plugin>
+
+            <!-- Plugin Maven pour générer le fichier WAR avec un nom personnalisé (facultatif) -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.2</version>
+                <configuration>
+                    <warName>WebStudentApp</warName>
+                </configuration>
+            </plugin>
+
         </plugins>
     </build>
 
