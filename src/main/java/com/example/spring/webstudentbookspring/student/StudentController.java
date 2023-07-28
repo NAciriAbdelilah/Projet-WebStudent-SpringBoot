@@ -9,7 +9,6 @@ import java.util.Optional;
 
 
 @RestController
-@RequestMapping("/api")
 public class StudentController {
     @Autowired
     StudentService service;
